@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="list.css">
+</head>
+<body>
+
+<form>
+<!--<a href="/add">Add Content</a><br />-->
+    <button type="submit" class="addcontentbutton" formaction="/add">Add Content</button>
+</form>
+
+<!--Title :<span th:text="${course.title}" ></span><br />
+Instructor :<span th:text="${course.instructor}" ></span><br />
+Description :<span th:text="${course.description}" ></span><br />
+Credits :<span th:text="${course.credit}" ></span><br />   -->
+<table>
+    <tr th:each="message : ${messages}">
+        <!--Title :<span th:text="${bullhorn.title}" ></span><br />-->
+        <br /><br /><br />
+        <label>Title: </label>
+        <textarea rows="1" cols="160" class="messagetitle" disabled th:text="${message.title}" /><br /><br />
+        <label>Content: </label>
+        <textarea rows="4" cols="160" class="messagecontent" disabled th:text="${message.content}"></textarea><br /><br />
+        <label>Sent By: </label>
+        <textarea rows="1" cols="40" class="messagesentby" disabled th:text="${message.sentby}" /></textarea>
+        <label>Date Posted: </label>
+        <textarea rows="1" cols="12" class="messageposteddate" disabled th:text="${message.posteddate}" ></textarea>
+        <label>Time Posted: </label>
+        <textarea rows="1" cols="12" class="messagepostedtime" disabled th:text="${message.postedtime}" ></textarea><br /><br /><br />
+
+        <!--<a th:href="@{/update/{id}(id=${message.id})}">Update</a> -
+        <a th:href="@{/detail/{id}(id=${message.id})}">Details</a> -
+        <a th:href="@{/delete/{id}(id=${message.id})}">Delete</a>-->
+
+        <form>
+            <!--<a href="/add">Add Content</a><br />-->
+            <input type="submit" value="Update" class="updatebutton" th:formaction="@{/update/{id}(id=${message.id})}">
+            <input type="submit" value="Details" class="detailsbutton" th:formaction="@{/detail/{id}(id=${message.id})}">
+            <input type="submit" value="Delete" class="deletebutton" th:formaction="@{/delete/{id}(id=${message.id})}">
+
+
+        </form>
+
+
+
+    </tr>
+
+
+
+    <br />
+    <br />
+
+    </tr>
+</table>
+
+<!--<tr th:each="course : ${courses}">
+    <td th:text="${course.title}"></td>
+    <td th:text="${course.instructor}"></td>
+    <td th:text="${course.credit}"></td>
+    <td>
+        <a th:href="@{/update/{id}(id=${course.id})}">Update</a> -
+        <a th:href="@{/detail/{id}(id=${course.id})}">Details</a> -
+        <a th:href="@{/delete/{id}(id=${course.id})}">Delete</a>
+    </td></tr>
+-->
+
+<!--<table>
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Posted Date</th>
+        <th>Sent By</th>
+    </tr>
+    <tr th:each="bullhorn : ${bullhorns}">
+        <td th:text="${bullhorn.title}"></td>
+        <td th:text="${bullhorn.content}"></td>
+        <td th:text="${bullhorn.postedDate}"></td>
+        <td th:text="${bullhorn.sentBy}"></td>
+    </tr>
+</table>   -->
+
+<footer>
+
+    <p>&#169; 2019 DMC Enterprises</p>
+</footer>
+
+
+</body>
+
+</html>

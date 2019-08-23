@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">Show All Messages</a><br />
+<!--Title :<span th:text="${bullhorn.title}" ></span><br />
+Date Posted :<span th:text="${bullhorn.postedDate}" ></span><br />
+Content :<span th:text="${bullhorn.content}" ></span><br />
+Sent by :<span th:text="${bullhorn.sentBy}" ></span><br /> -->
+
+Title: <textarea rows="1" cols="160" disabled th:text="${message.title}" />
+Date Posted :<span th:text="${message.posteddate}" ></span><br />
+Time Posted :<span th:text="${message.postedtime}" ></span><br />
+Content :<textarea rows="4" cols="160" disabled th:text="${message.content}"></textarea><br /><br />
+Sent By :<span th:text="${message.sentby}" ></span><br />
+
+
+<a th:href="@{/delete/{id}(id=${message.id})}">Delete this message</a>
+
+
+
+</body>
+</html>
