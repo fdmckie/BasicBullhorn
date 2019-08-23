@@ -1,0 +1,40 @@
+.messagetitle {
+    width: 90%;
+    resize: none;
+}
+
+.messagecontent {
+    width: 88%;
+    resize: none;
+}
+
+.messagesentby {
+    width: 50%;
+    padding: 12px;
+    resize: none;
+}
+
+.messageposteddate {
+    width: 10%;
+    padding: 12px 20px;
+    resize: none;
+}
+
+.messagepostedtime {
+    width: 10%;
+    padding: 12px 20px;
+    resize: none;
+}
+
+
+.showallmessagesbutton{
+    padding: 15px 32px;
+    background-color: aqua;
+    border-radius: 12px;
+}
+
+.deletebutton {
+    padding: 15px 32px;
+    background-color: red;
+    border-radius: 12px;
+}

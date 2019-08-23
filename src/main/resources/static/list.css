@@ -1,27 +1,3 @@
-.addcontentbutton {
-    padding: 15px 32px;
-    background-color: aqua;
-    border-radius: 12px;
-}
-
-.detailsbutton {
-    padding: 15px 32px;
-    background-color: aqua;
-    border-radius: 12px;
-}
-
-.updatebutton {
-    padding: 15px 32px;
-    background-color: aqua;
-    border-radius: 12px;
-}
-
-.deletebutton {
-    padding: 15px 32px;
-    background-color: red;
-    border-radius: 12px;
-}
-
 .messagetitle {
     width: 90%;
     resize: none;
@@ -49,4 +25,32 @@
     padding: 12px 20px;
     resize: none;
 }
+
+.addcontentbutton {
+    padding: 15px 32px;
+    background-color: aqua;
+    border-radius: 12px;
+}
+
+.detailsbutton {
+    padding: 15px 32px;
+    background-color: aqua;
+    border-radius: 12px;
+}
+
+.updatebutton {
+    padding: 15px 32px;
+    background-color: aqua;
+    border-radius: 12px;
+}
+
+.deletebutton {
+    padding: 15px 32px;
+    background-color: red;
+    border-radius: 12px;
+}
+
+
+
+
 

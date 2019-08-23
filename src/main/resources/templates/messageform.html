@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -10,12 +11,55 @@
     <input type="hidden" th:field="*{posteddate}" />
     <input type="hidden" th:field="*{postedtime}" />
 
+&lt;!&ndash;    Title :<input type="text" th:field="*{title}" />&ndash;&gt;
+    &lt;!&ndash;<label>Title: </label>
+    <textarea rows="1" maxlength="160" class="messagetitle" th:text="${message.title}" ></textarea>&ndash;&gt;
     Title :<input type="text" th:field="*{title}" />
     <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span><br />
-    Content :<textarea rows="3" maxlength="140" th:field="*{content}" />
-    <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span><br />
-    <!--Posted Date :<input type="text" th:field="*{postedDate}" />
-    <span th:if="${#fields.hasErrors('postedDate')}" th:errors="*{postedDate}"></span><br /> -->
-    Sent By :<input type="text" th:field="*{sentby}" />
-    <span th:if="${#fields.hasErrors('sentby')}" th:errors="*{sentby}"></span><br />
+
+
+&lt;!&ndash;    Content :<textarea rows="3" maxlength="140" th:field="*{content}" />&ndash;&gt;
+    <label>Content: </label>
+    <textarea rows="4" maxlenght="160" class="messagecontent" th:text="${message.content}"></textarea>
+    <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span><br /><br />
+
+&lt;!&ndash;    Sent By :<input type="text" th:field="*{sentby}" />&ndash;&gt;
+    <label>Sent By: </label>
+    <textarea rows="1" maxlenght="40" class="messagesentby" th:text="${message.sentby}"></textarea>
+    <span th:if="${#fields.hasErrors('sentby')}" th:errors="*{sentby}"></span><br /><br />
+
     <input type="submit" value="Submit" />
+
+</form>
+</body>
+</html>
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="messageform.css">
+</head>
+<body>
+<form action="#" th:action="@{/process}" th:object="${message}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <input type="hidden" th:field="*{posteddate}" />
+    <input type="hidden" th:field="*{postedtime}" />
+
+    Title :<input type="text" class="messagetitle" th:field="*{title}" />
+    <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span><br />
+    Content :<textarea rows="3" maxlength="140" class="messagecontent" th:field="*{content}" />
+    <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span><br />
+    Sent By :<input type="text" class="messagesentby" th:field="*{sentby}" />
+    <span th:if="${#fields.hasErrors('sentby')}" th:errors="*{sentby}"></span><br /><br />
+    <input type="submit" value="Submit" class="messagesubmitbutton"/>
+
+
+</form>
+</body>
+</html>
+
