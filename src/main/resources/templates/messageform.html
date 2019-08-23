@@ -49,11 +49,11 @@
     <input type="hidden" th:field="*{id}" />
     <input type="hidden" th:field="*{posteddate}" />
     <input type="hidden" th:field="*{postedtime}" />
-
+    <br /><br />
     Title :<input type="text" class="messagetitle" th:field="*{title}" />
-    <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span><br />
+    <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span><br /><br />
     Content :<textarea rows="3" maxlength="140" class="messagecontent" th:field="*{content}" />
-    <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span><br />
+    <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span><br /><br/>
     Sent By :<input type="text" class="messagesentby" th:field="*{sentby}" />
     <span th:if="${#fields.hasErrors('sentby')}" th:errors="*{sentby}"></span><br /><br />
     <input type="submit" value="Submit" class="messagesubmitbutton"/>

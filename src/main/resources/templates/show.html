@@ -14,6 +14,8 @@
 
 <br />
 <br />
+<table>
+    <tr>
 <label>Title: </label>
 <textarea rows="1" cols="160" class="messagetitle" disabled th:text="${message.title}" /><br /><br />
 <label>Content: </label>
@@ -24,6 +26,8 @@
 <textarea rows="1" cols="12" class="messageposteddate" disabled th:text="${message.posteddate}" ></textarea>
 <label>Time Posted: </label>
 <textarea rows="1" cols="12" class="messagepostedtime" disabled th:text="${message.postedtime}" ></textarea><br /><br /><br />
+    </tr>
+</table>
 <form>
     <!--<a href="/add">Add Content</a><br />-->
     <!--<input type="submit" value="Update" class="updatebutton" th:formaction="@{/update/{id}(id=${message.id})}">
